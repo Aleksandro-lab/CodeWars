@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace CodeWars
 {
@@ -6,16 +8,25 @@ namespace CodeWars
     {
         static void Main(string[] args)
         {
-            int maxNum = 10;
-            int cnt = 0;
-            for (int i = 3; i < maxNum; i++)
+            int[] a = new int[] {1, 2, 3, 4};
+            int[] b = new int[] {1, 2, 3};
+            List<int> list = new List<int>();
+            List<int> finalList = new List<int>();
+            for (int i = 0; i < a.Length; i++)
             {
-                if (i % 3 == 0 || i % 5 == 0)
-                {
-                    cnt = cnt + i;
-                }
+                list.Add(a[i]);                
             }
-            Console.WriteLine(cnt);
+            
+            for (int i = 0; i < b.Length; i++)
+            {
+                if (list.Contains(b[i]))
+                {
+                    list.RemoveAll()
+                }
+                
+                
+            }
+            Console.WriteLine(0);
             Console.ReadLine();
         }
     }
