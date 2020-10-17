@@ -8,24 +8,24 @@ namespace CodeWars
     {
         static void Main(string[] args)
         {
-            int[] a = new int[] {1, 2, 3, 4};
-            int[] b = new int[] {1, 2, 3};
-            List<int> list = new List<int>();
-            
-            for (int i = 0; i < a.Length; i++)
-            {
-                list.Add(a[i]);                
-            }
-            
-            for (int i = 0; i < b.Length; i++)
-            {
-                list.RemoveAll(b[i]);
-                
-                
-            }
 
-            Console.WriteLine(0);
+            int[] array = new int[] { 5, 3, 2, 8, 1, 4 };
+            int[] arraySec = new int[array.Length];
+            
+            int max = 0;
+            int min = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > max)
+                {
+                    max = array[i];
+                    break;
+                }
+            }
+            Console.WriteLine(max);
             Console.ReadLine();
+            
+
         }
     }
 }
